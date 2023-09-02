@@ -196,40 +196,40 @@ $(document).ready(function () {
     JHM = L.marker([25.164, 68.007],{
         icon: iconWind,
         title: "Wind Power Project Jhimpir Power (Pvt.) Limited"
-    }).addTo(myMap).bindPopup('<img src = "./img/JHM.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/JHM.PNG" style = "width: 300px">')
     WDF = L.marker([24.919, 67.805],{
         icon: iconWind,
         title: "Windfarm At Jhimpir"
-    }).addTo(myMap).bindPopup('<img src = "./img/WDF.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/WDF.PNG" style = "width: 300px">')
     HAWA = L.marker([25.255, 67.979],{
         icon: iconWind,
         title: "Hawa Energy (Pvt.) Ltd"
-    }).addTo(myMap).bindPopup('<img src = "./img/HAWA.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HAWA.PNG" style = "width: 300px">')
     ZOR = L.marker([25.042, 67.996],{
         icon: iconWind,
         title: "Zorlu Enerji"
-    }).addTo(myMap).bindPopup('<img src = "./img/ZOR.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ZOR.PNG" style = "width: 300px">')
     TBT = L.marker([25.013, 67.852],{
         icon: iconWind,
         title: "Triconboston Wind Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/TBT.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/TBT.PNG" style = "width: 300px">')
                                         //Solar Power
     HHM = L.marker([27.419, 69.007],{
         icon: iconSolar,
         title: "Scatec Solar Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/HHM.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HHM.PNG" style = "width: 300px">')
     ZNFA = L.marker([30.903, 71.560],{
         icon: iconSolar,
         title: "Atlas Solar Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/ZNFA.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ZNFA.PNG" style = "width: 300px">')
     ZLU = L.marker([29.281, 71.789],{
         icon: iconSolar,
         title: "Zorlu Solar Pakistan (Pvt.) Ltd"
-    }).addTo(myMap).bindPopup('<img src = "./img/ZLU.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ZLU.PNG" style = "width: 300px">')
     KCH1 = L.marker([30.435, 66.920],{
         icon: iconSolar,
         title: "Solar PV Power Project Kuchlak-II & III"
-    }).addTo(myMap).bindPopup('<img src = "./img/KCH1.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/KCH1.PNG" style = "width: 300px">')
     // KCH2 = L.marker([30.435, 66.920],{icon: iconSolar
     // }).addTo(myMap).bindPopup('<img src = "./img/KCH2.JPG" style = "width: 300px">')
     //Overlay
