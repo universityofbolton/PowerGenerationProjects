@@ -134,39 +134,39 @@ $(document).ready(function () {
     Uch = L.marker([28.582, 68.172],{
         icon: iconThermal,
         title: "UCH-II Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/UCH.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/UCH.PNG" style = "width: 300px">')
     Hub = L.marker([24.919, 66.689],{
         icon: iconThermal,
         title: "660 MW Coal-Fired Power Plant"
-    }).addTo(myMap).bindPopup('<img src = "./img/HUB.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HUB.PNG" style = "width: 300px">')
     KAPCO = L.marker([30.147, 71.023],{
         icon: iconThermal,
         title: "KAPCO 660 MW Coal-Fired Power Plant"
-    }).addTo(myMap).bindPopup('<img src = "./img/KAPCO.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/KAPCO.PNG" style = "width: 300px">')
     BQPS = L.marker([24.789, 67.360],{
         icon: iconThermal,
         title: "BQPS-III 900 MW RLNG Based Combined Cycle Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/BQPS.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/BQPS.PNG" style = "width: 300px">')
     KPC = L.marker([24.856, 67.155],{
         icon: iconThermal,
         title: "Dual-Fuel Combined Cycle Power Plant KPC-II"
-    }).addTo(myMap).bindPopup('<img src = "./img/KPC.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/KPC.PNG" style = "width: 300px">')
     JAM = L.marker([25.474, 68.267],{
         icon: iconThermal,
         title: "Jamshoro Power Generation Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/JAM.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/JAM.PNG" style = "width: 300px">')
     HUBCO = L.marker([24.908, 66.695],{
         icon: iconThermal,
         title: "HUBCO Thar Coal Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/HUBCO.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HUBCO.PNG" style = "width: 300px">')
     ENG = L.marker([24.791, 67.378],{
         icon: iconThermal,
         title: "Engro Powergen Limited 450 MW RLNG CCPP"
-    }).addTo(myMap).bindPopup('<img src = "./img/ENG.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ENG.PNG" style = "width: 300px">')
     THAR = L.marker([24.816, 70.391],{
         icon: iconThermal,
         title: "Coal-Fired Power Plant in Energy Park, Block II Thar Coalfields"
-    }).addTo(myMap).bindPopup('<img src = "./img/THAR.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/THAR.PNG" style = "width: 300px">')
                                         //Hydropower
     PAT = L.marker([34.342, 73.429],{
         icon: iconHydel,
