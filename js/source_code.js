@@ -8,8 +8,6 @@ var googleHybrid;
 var baselayers;
 var Overlay1;
 var UniName;
-var mrkCurrentLocation;
-var popKeenjhar;
 var ctlPan;
 var ctlZoomSlider;
 var ctlMousePosition;
@@ -20,38 +18,67 @@ var ctlDraw;
 var fDrawGroup;
 var ctlStyle;
 var mapScale;
-var companyLogo;
-                                    //GeoJSON
+var searchLayer;
+var zoomHome;
+                                    //Markers
+var Uch;
+var Hub;
+var KAPCO;
+var BQPS;
+var KPC;
+var JAM;
+var HUBCO;
+var ENG;
+var THAR;
+var PAT;
+var ARK;
+var GUL;
+var DAS;
+var AZD;
+var TAR;
+var JHM;
+var WDF;
+var HAWA;
+var ZOR;
+var TBT;
+var HHM;
+var ZNFA;
+var ZLU;
+var KCH1;
+var KCH2;
+//GeoJSON
 var Pakistan;
-var lyrThermal;
-var lyrHydel;
-var lyrSolar;
-                                // ICON DEFINITION
+                                // ICON DEFINITION....
 // Thermal
 var iconThermal = L.icon({
     iconUrl: 'img/Thermal.png',
-    iconSize: [15, 15],
+    iconSize: [18, 18],
     iconAnchor: [5, 5],
     popupAnchor: [5, 5]
 });
 // Hydel
 var iconHydel = L.icon({
-    iconUrl: 'img/Hydel.png',
-    iconSize: [20, 20],
+    iconUrl: 'img/Hydel1.png',
+    iconSize: [15, 15],
+    iconAnchor: [5, 5],
+    popupAnchor: [5, 5]
+});
+// Wind
+var iconWind = L.icon({
+    iconUrl: 'img/Wind.png',
+    iconSize: [15, 15],
     iconAnchor: [5, 5],
     popupAnchor: [5, 5]
 });
 // Solar
 var iconSolar = L.icon({
-    iconUrl: 'img/Solar.ico',
-    iconSize: [20, 20],
+    iconUrl: 'img/Solar.png',
+    iconSize: [18, 18],
     iconAnchor: [5, 5],
     popupAnchor: [5, 5]
 });
 $(document).ready(function () {
-    myMap = L.map('map_div', { center: [30, 70], zoom: 5.499999999 });
-    //Zoom Slider
-    //ctlZoomSlider = L.control.zoomslider(option = { position: 'topright' }).addTo(myMap);
+    myMap = L.map('map_div', { center: [30, 70], zoom: 5.499999999, zoomControl: false });
 
     //BASEMAPS
     //osm layer
@@ -103,291 +130,116 @@ $(document).ready(function () {
             };
         },
     }).addTo(myMap);
-    
-                                            //POINT FILES
-    //Thermal Power
-    lyrThermal = L.geoJSON.ajax('data/ThermalEnergy.geojson', {
-        onEachFeature: (feature = {}, layer) => {
-            const { properties = {} } = feature;
-            const { Name } = properties;
-            if (!Name) return;
-            layer.bindPopup("<h5>" + properties.Name + "</h5>");
-        },
-        pointToLayer: function (geoJsonPoint, latlng) {
-            return L.marker(latlng, {
-                icon: iconThermal
-            });
-        }
-    }).addTo(myMap);
-    // Hydro Power
-    lyrHydel = L.geoJSON.ajax('data/Hydel.geojson', {
-        onEachFeature: (feature = {}, layer) => {
-            const { properties = {} } = feature;
-            const { Name } = properties;
-            if (!Name) return;
-            layer.bindPopup("<h5>" + properties.Name + "</h5>");
-        },
-        pointToLayer: function (geoJsonPoint, latlng) {
-            return L.marker(latlng, {
-                icon: iconHydel
-            });
-        }
-    }).addTo(myMap);
-    // Solar Power
-    lyrHydel = L.geoJSON.ajax('data/SolarPower.geojson', {
-        onEachFeature: (feature = {}, layer) => {
-            const { properties = {} } = feature;
-            const { Name } = properties;
-            if (!Name) return;
-            layer.bindPopup("<h5>" + properties.Name + "</h5>");
-        },
-        pointToLayer: function (geoJsonPoint, latlng) {
-            return L.marker(latlng, {
-                icon: iconSolar
-            });
-        }
-    }).addTo(myMap);
-    // lyrSuperSix = L.geoJSON.ajax('data/SuperSix.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: SuperSix
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // lyrCompleteWindProject = L.geoJSON.ajax('data/CompletedWindProject.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: complete
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // lyrPlannedWindProject = L.geoJSON.ajax('data/PlannedWindProject.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: planned
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // lyrUnderConsWindProject = L.geoJSON.ajax('data/UnderConstruction.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: undercons
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // //Protected Area Point
-    // lyrBirdArea = L.geoJSON.ajax('data/birdarea.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { NATIONAL_N } = properties;
-    //         if (!NATIONAL_N) return;
-    //         layer.bindPopup("<h5>" + properties.NATIONAL_N + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: areabird
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // lyrGameReserve = L.geoJSON.ajax('data/gamereserve.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: greserve
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // lyrNationalPark = L.geoJSON.ajax('data/nationalpark.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: park
-    //         });
-    //     }
-    // }).addTo(myMap);
-    // lyrWildLife = L.geoJSON.ajax('data/wildlife.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h5>" + properties.Name + "</h5>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: wsanctuary
-    //         });
-    //     }
-    // }).addTo(myMap);
-
-                                        //Receptors
-    // lyrBatCave = L.geoJSON.ajax('data/BatCaves.json', {
-    //     style: function (feature) {
-    //         return {
-    //             weight: 0.5
-    //         }
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: bcave
-    //         });
-    //     },
-    // }).addTo(myMap);
-    // lyrBirdNest = L.geoJSON.ajax('data/BirdNest.json', {
-    //     style: function (feature) {
-    //         return {
-    //             weight: 0.5
-    //         }
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: bnest
-    //         });
-    //     },
-    // }).addTo(myMap);
-    // lyrGuggulPlant = L.geoJSON.ajax('data/GugalPlant.json', {
-    //     style: function (feature) {
-    //         return {
-    //             weight: 0.5
-    //         }
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: gplant
-    //         });
-    //     },
-    // }).addTo(myMap);
-
-                                        //Cities and Villages
-    // lyrCity = L.geoJSON.ajax('data/city.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h6>" + properties.Name + "</h6>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: citi
-    //         });
-    //     }
-    // });
-    // lyrVillage = L.geoJSON.ajax('data/town.json', {
-    //     onEachFeature: (feature = {}, layer) => {
-    //         const { properties = {} } = feature;
-    //         const { Name } = properties;
-    //         if (!Name) return;
-    //         layer.bindPopup("<h7>" + properties.Name + "</h7>");
-    //     },
-    //     pointToLayer: function (geoJsonPoint, latlng) {
-    //         return L.marker(latlng, {
-    //             icon: vil
-    //         });
-    //     }
-    // });
-    // //Road and Tracks
-    // lyrMotorway = L.geoJSON.ajax('data/MotorwayM9.json', {
-    //     style: {
-    //         color: "#FFFF64",
-    //         weight: 3
-    //     }
-    // });
-    // lyrHighway = L.geoJSON.ajax('data/Highway.json', {
-    //     style: {
-    //         color: "white",
-    //         weight: 4,
-    //     }
-    // });
-    // lyrSealed = L.geoJSON.ajax('data/SealedRoads.json', {
-    //     style: {
-    //         color: "white",
-    //         weight: 2
-    //     }
-    // });
-    // lyrUnsealed = L.geoJSON.ajax('data/UnsealedRoad.json', {
-    //     style: {
-    //         color: "white",
-    //         weight: 2,
-    //         dashArray: '7,14',
-    //     }
-    // }).addTo(myMap);
-    // lyrCompacted = L.geoJSON.ajax('data/CompactedRoad.json', {
-    //     style: {
-    //         color: "white",
-    //         weight: 2,
-    //         dashArray: '3,6',
-    //     }
-    // }).addTo(myMap);
-    //Spatial Boundary
-    // lyrSpatialBoundary = L.geoJSON.ajax('data/SpatialBoundary.json', {
-    //     style: {
-    //         fillcolor: '0',
-    //         fillOpacity: '0',
-    //         color: 'black',
-    //     },
-    // }).addTo(myMap);
-    Overlay1 = {
-        "Thermal Power Projects" : lyrThermal,
-        "Hydro Power Projects" : lyrHydel,
-    }
-    L.control.layers(baselayers, Overlay1).addTo(myMap);
+                                            //Thermal Technology
+    Uch = L.marker([28.582, 68.172],{
+        icon: iconThermal,
+        title: "UCH-II Power Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/UCH.JPG" style = "width: 300px">')
+    Hub = L.marker([24.919, 66.689],{
+        icon: iconThermal,
+        title: "660 MW Coal-Fired Power Plant"
+    }).addTo(myMap).bindPopup('<img src = "./img/HUB.JPG" style = "width: 300px">')
+    KAPCO = L.marker([30.147, 71.023],{
+        icon: iconThermal,
+        title: "KAPCO 660 MW Coal-Fired Power Plant"
+    }).addTo(myMap).bindPopup('<img src = "./img/KAPCO.JPG" style = "width: 300px">')
+    BQPS = L.marker([24.789, 67.360],{
+        icon: iconThermal,
+        title: "BQPS-III 900 MW RLNG Based Combined Cycle Power Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/BQPS.JPG" style = "width: 300px">')
+    KPC = L.marker([24.856, 67.155],{
+        icon: iconThermal,
+        title: "Dual-Fuel Combined Cycle Power Plant KPC-II"
+    }).addTo(myMap).bindPopup('<img src = "./img/KPC.JPG" style = "width: 300px">')
+    JAM = L.marker([25.474, 68.267],{
+        icon: iconThermal,
+        title: "Jamshoro Power Generation Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/JAM.JPG" style = "width: 300px">')
+    HUBCO = L.marker([24.908, 66.695],{
+        icon: iconThermal,
+        title: "HUBCO Thar Coal Power Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/HUBCO.JPG" style = "width: 300px">')
+    ENG = L.marker([24.791, 67.378],{
+        icon: iconThermal,
+        title: "Engro Powergen Limited 450 MW RLNG CCPP"
+    }).addTo(myMap).bindPopup('<img src = "./img/ENG.JPG" style = "width: 300px">')
+    THAR = L.marker([24.816, 70.391],{
+        icon: iconThermal,
+        title: "Coal-Fired Power Plant in Energy Park, Block II Thar Coalfields"
+    }).addTo(myMap).bindPopup('<img src = "./img/THAR.JPG" style = "width: 300px">')
+                                        //Hydropower
+    PAT = L.marker([34.342, 73.429],{
+        icon: iconHydel,
+        title: "Patrind Hydropower Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/PAT.JPG" style = "width: 300px">')
+    ARK = L.marker([36.026, 71.737],{
+        icon: iconHydel,
+        title: "Arkari Gol Hydropower Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/ARK.JPG" style = "width: 300px">')
+    GUL = L.marker([33.455, 73.863],{
+        icon: iconHydel,
+        title: "Gulpur Hydropower Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/GUL.JPG" style = "width: 300px">')
+    DAS = L.marker([35.301, 73.203],{
+        icon: iconHydel,
+        title: "Dasu Hydropower Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/DAS.JPG" style = "width: 300px">')
+    AZD = L.marker([33.76775000, 73.57151389],{
+        icon: iconHydel,
+        title: "Azad Pattan Hydropower Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/AZD.JPG" style = "width: 300px">')
+    TAR = L.marker([34.088, 72.699],{
+        icon: iconHydel,
+        title: "Tarbela 5th Extension Hydropower Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/TAR.JPG" style = "width: 300px">')
+                                        //Wind Power
+    JHM = L.marker([25.164, 68.007],{
+        icon: iconWind,
+        title: "Wind Power Project Jhimpir Power (Pvt.) Limited"
+    }).addTo(myMap).bindPopup('<img src = "./img/JHM.JPG" style = "width: 300px">')
+    WDF = L.marker([24.919, 67.805],{
+        icon: iconWind,
+        title: "Windfarm At Jhimpir"
+    }).addTo(myMap).bindPopup('<img src = "./img/WDF.JPG" style = "width: 300px">')
+    HAWA = L.marker([25.255, 67.979],{
+        icon: iconWind,
+        title: "Hawa Energy (Pvt.) Ltd"
+    }).addTo(myMap).bindPopup('<img src = "./img/HAWA.JPG" style = "width: 300px">')
+    ZOR = L.marker([25.042, 67.996],{
+        icon: iconWind,
+        title: "Zorlu Enerji"
+    }).addTo(myMap).bindPopup('<img src = "./img/ZOR.JPG" style = "width: 300px">')
+    TBT = L.marker([25.013, 67.852],{
+        icon: iconWind,
+        title: "Triconboston Wind Power Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/TBT.JPG" style = "width: 300px">')
+                                        //Solar Power
+    HHM = L.marker([27.419, 69.007],{
+        icon: iconSolar,
+        title: "Scatec Solar Power Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/HHM.JPG" style = "width: 300px">')
+    ZNFA = L.marker([30.903, 71.560],{
+        icon: iconSolar,
+        title: "Atlas Solar Power Project"
+    }).addTo(myMap).bindPopup('<img src = "./img/ZNFA.JPG" style = "width: 300px">')
+    ZLU = L.marker([29.281, 71.789],{
+        icon: iconSolar,
+        title: "Zorlu Solar Pakistan (Pvt.) Ltd"
+    }).addTo(myMap).bindPopup('<img src = "./img/ZLU.JPG" style = "width: 300px">')
+    KCH1 = L.marker([30.435, 66.920],{
+        icon: iconSolar,
+        title: "Solar PV Power Project Kuchlak-II & III"
+    }).addTo(myMap).bindPopup('<img src = "./img/KCH1.JPG" style = "width: 300px">')
+    // KCH2 = L.marker([30.435, 66.920],{icon: iconSolar
+    // }).addTo(myMap).bindPopup('<img src = "./img/KCH2.JPG" style = "width: 300px">')
+    //Overlay
+    L.control.layers(baselayers).addTo(myMap);
+    //Home Button
+    zoomHome = L.Control.zoomHome();
+    zoomHome.addTo(myMap);
 
     //Draw Group
     fDrawGroup = new L.featureGroup().addTo(myMap);
-
-    //Pan Buttons
-    //ctlPan = L.control.pan().addTo(myMap);
-
-
-    //Mouse Control Position
-    //ctlMousePosition = L.control.mousePosition().addTo(myMap);
-
-    //EasyButton
-    // ctlEasyButton = L.easyButton('fa fa-location-arrow', function () {
-    //     myMap.locate();
-    // }).addTo(myMap);
-
-    //MeasureDistance
-    ctlMeasure = L.control.polylineMeasure().addTo(myMap);
-    //SideBar
-    // ctlSideBar = L.control.sidebar(placeholder = 'side-bar').addTo(myMap);
-    // ctlEasyButton = L.easyButton('fa fa-align-justify', function () {
-    //     ctlSideBar.toggle();
-    // }).addTo(myMap);
-
     //Draw Features on Map
     ctlDraw = new L.Control.Draw({
         edit: {
@@ -401,7 +253,7 @@ $(document).ready(function () {
     ctlStyle = L.control.styleEditor(option = { position: 'topleft' }).addTo(myMap);
                                         // Scale
     mapScale =  L.control.scale().addTo(myMap);
-                                    //logo and company name
+                                    //logo and UniName
     L.Control.Watermark = L.Control.extend({
         onAdd: function (map) {
             var img = L.DomUtil.create('img');
@@ -414,58 +266,5 @@ $(document).ready(function () {
         return new L.Control.Watermark(opts);
     }
     L.control.Watermark({ position: 'bottomright' }).addTo(myMap);
-
-    //EVENTS
-    //left click
-    //myMap.on('click', function (e) {
-    //alert(e.latlng.toString());
-    //});
-
-    //right click
-    // myMap.on('contextmenu', function (e) {
-    // L.marker(e.latlng).addTo(myMap).bindPopup(e.latlng.toString());
-    // })
-    //call locate method
-    // myMap.on('keypress', function (e) {
-    //     if (e.originalEvent.key = 'l') {
-    //         myMap.locate();
-    //     }
-    // })
-    // myMap.on('locationfound', function (e) {
-    //     if (mrkCurrentLocation) {
-    //         mrkCurrentLocation.remove();
-    //     }
-    //     mrkCurrentLocation = L.circleMarker(e.latlng).addTo(myMap);
-    //     myMap.setView(e.latlng, 14);
-    // })
-    // myMap.on('locationerror', function (e) {
-    //     alert("location is not found");
-    // })
-    // get user location button
-
-    // $('#get_user_location_id').click(function () {
-    //     myMap.locate();
-    // })
-    //get_specific_location
-    // $('#go_to_id').click(function () {
-    //     myMap.setView([24.967385, 68.03627], 12)
-    //     myMap.openPopup(popKeenjhar);
-    // })
-    //get_zoom_level
-    // myMap.on('zoomend', function () {
-    //     $("#zoom_level_id").html(myMap.getZoom());
-    // })
-    //get map center
-    // myMap.on('moveend', function (e) {
-    //     $('#map_center_id').html(lat_lng_to_string(myMap.getCenter()));
-    // })
-    //get_mouse_location
-   //myMap.on('mousemove', function (e) {
-        //$('#mouse_location_id').html(lat_lng_to_string(e.latlng));
-    //})
-
-    //custom function
-    // function lat_lng_to_string(ll) {
-    //     return "[" + ll.lat.toFixed(fractionDigits = 3) + ", " + ll.lng.toFixed(fractionDigits = 3) + "]";
-    // }
+    L.Control.geocoder().addTo(myMap);
 })
