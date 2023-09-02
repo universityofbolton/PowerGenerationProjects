@@ -1,0 +1,141 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.42880833,34.34173056 ]
+    },
+    "properties": {
+    "No":10,
+    "Name":"Patrind Hydropower Project",
+    "Energy Type":"Hydel",
+    "Technology":"Run-of-the-River",
+    "Year":2010,
+    "MW":150,
+    "Location":"Muzaffarabad",
+    "Province":"AJK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.46605556,34.66086111 ]
+    },
+    "properties": {
+    "No":11,
+    "Name":"Balakot Hydropower Development Project",
+    "Energy Type":"Hydel",
+    "Technology":"Run-of-the-River",
+    "Year":2019,
+    "MW":300,
+    "Location":"Mansehra",
+    "Province":"KPK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 71.73685,36.02591111 ]
+    },
+    "properties": {
+    "No":12,
+    "Name":"Arkari Gol Hydropower Project",
+    "Energy Type":"Hydel",
+    "Technology":"Run-of-the-River",
+    "Year":2018,
+    "MW":99,
+    "Location":"Chitral",
+    "Province":"KPK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.86293056,33.45501389 ]
+    },
+    "properties": {
+    "No":13,
+    "Name":"Gulpur Hydropower Project ",
+    "Energy Type":"Hydel",
+    "Technology":"Run-of-the-River",
+    "Year":2014,
+    "MW":100,
+    "Location":"Kotli",
+    "Province":"AJK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.20309444,35.30069444 ]
+    },
+    "properties": {
+    "No":14,
+    "Name":"Dasu Hydropower Project",
+    "Energy Type":"Hydel",
+    "Technology":"Gravity Dam",
+    "Year":2014,
+    "MW":4320,
+    "Location":"Kohistan",
+    "Province":"KPK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.50052778,34.07044444 ]
+    },
+    "properties": {
+    "No":34,
+    "Name":"Kohala Hydropower Project",
+    "Energy Type":"Hydel",
+    "Technology":"Run-of-the-River",
+    "Year":2017,
+    "MW":1124,
+    "Location":"Hattian",
+    "Province":"AJK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.56277778,33.77638889 ]
+    },
+    "properties": {
+    "No":35,
+    "Name":"Azad Pattan Hydropower Project ",
+    "Energy Type":"Hydel",
+    "Technology":"Run-of-the-River",
+    "Year":2017,
+    "MW":700,
+    "Location":"Sudhanoti",
+    "Province":"AJK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 72.69884444,34.08823611 ]
+    },
+    "properties": {
+    "No":39,
+    "Name":"Tarbela 5th Extension Hydropower Project",
+    "Energy Type":"Hydel",
+    "Technology":"Fill-Type Dam",
+    "Year":2016,
+    "MW":1410,
+    "Location":"Topi, Swabi",
+    "Province":"KPK"
+    }
+  }
+]
+}

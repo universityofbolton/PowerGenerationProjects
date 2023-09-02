@@ -1,0 +1,209 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 68.17241944,28.58237778 ]
+    },
+    "properties": {
+    "No":1,
+    "Name":"UCH-II Power Project",
+    "Energy Type":"Thermal Power",
+    "Technology":"Gas-Fired",
+    "Year":2010,
+    "MW":404,
+    "Location":"Dera Murad Jamali",
+    "Province":"Balochistan"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 66.68866667,24.91880556 ]
+    },
+    "properties": {
+    "No":2,
+    "Name":"2 × 660 MW Coal-Fired Power Plant near Hub",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2015,
+    "MW":1320,
+    "Location":"Near Hub",
+    "Province":"Balochistan"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 71.02255556,30.14747222 ]
+    },
+    "properties": {
+    "No":3,
+    "Name":"KAPCO 660 MW Coal-Fired Power Plant",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2016,
+    "MW":660,
+    "Location":"Near Basti Hamdan",
+    "Province":"Punjab"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 68.28888889,25.70286111 ]
+    },
+    "properties": {
+    "No":4,
+    "Name":"Coal Fired Power Plant Construction Project",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2015,
+    "MW":660,
+    "Location":"Jamshoro",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 67.27805278,24.81750278 ]
+    },
+    "properties": {
+    "No":5,
+    "Name":"Lucky Electric Power Company 660 MW Coal Power Project",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2015,
+    "MW":660,
+    "Location":"Bin Qasim Town, Karachi",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 67.36002222,24.78857222 ]
+    },
+    "properties": {
+    "No":6,
+    "Name":"BQPS-III 900 MW RLNG Based Combined Cycle Power Project ",
+    "Energy Type":"Thermal Power",
+    "Technology":"RLNG",
+    "Year":2017,
+    "MW":900,
+    "Location":"Port Qasim, Karachi",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 67.154875,24.85600833 ]
+    },
+    "properties": {
+    "No":7,
+    "Name":"Dual-Fuel Combined Cycle Power Plant KPC-II",
+    "Energy Type":"Thermal Power",
+    "Technology":"RFO+NG",
+    "Year":2016,
+    "MW":250,
+    "Location":"Port Qasim, Karachi",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 68.26697222,25.47351667 ]
+    },
+    "properties": {
+    "No":8,
+    "Name":"Jamshoro Power Generation Project",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2013,
+    "MW":600,
+    "Location":"Jamshoro",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 66.69540278,24.90830556 ]
+    },
+    "properties": {
+    "No":9,
+    "Name":"HUBCO Thar Coal Power Project (Thar Energy)",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2016,
+    "MW":330,
+    "Location":"Tharparkar",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 67.37805556,24.79111111 ]
+    },
+    "properties": {
+    "No":36,
+    "Name":"Engro Powergen Limited 450 MW RLNG CCPP",
+    "Energy Type":"Thermal Power",
+    "Technology":"RLNG",
+    "Year":2015,
+    "MW":450,
+    "Location":"Port Qasim, Karachi",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 67.41994167,24.83815278 ]
+    },
+    "properties": {
+    "No":37,
+    "Name":"Coal Power Plant (CPP) Project Fauji Fertilizer Bin  Qasim Complex",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2014,
+    "MW":115,
+    "Location":"Port Qasim, Karachi",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 70.39060833,24.816125 ]
+    },
+    "properties": {
+    "No":38,
+    "Name":"Coal-Fired Power Plant in Energy Park, Block II Thar Coalfields",
+    "Energy Type":"Thermal Power",
+    "Technology":"Coal-Fired",
+    "Year":2016,
+    "MW":330,
+    "Location":"Tharparkar",
+    "Province":"Sindh"
+    }
+  }
+]
+}

@@ -1,0 +1,141 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 69.00711944,27.41889444 ]
+    },
+    "properties": {
+    "No":26,
+    "Name":"Helios Power (Pvt.) Ltd",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2015,
+    "MW":50,
+    "Location":"Sukkur",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 69.00347778,27.40471389 ]
+    },
+    "properties": {
+    "No":27,
+    "Name":"HNDS Energy (Pvt.) Ltd",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2015,
+    "MW":50,
+    "Location":"Sukkur",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 69.01109722,27.4142 ]
+    },
+    "properties": {
+    "No":28,
+    "Name":"Meridian Energy (Pvt.) Ltd",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2015,
+    "MW":50,
+    "Location":"Sukkur",
+    "Province":"Sindh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 71.56005833,30.90329444 ]
+    },
+    "properties": {
+    "No":29,
+    "Name":"Zhenfa Pakistan New Energy Company (Pvt.) Ltd",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2015,
+    "MW":100,
+    "Location":"Layyah",
+    "Province":"Punjab"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 71.78888333,29.28058333 ]
+    },
+    "properties": {
+    "No":30,
+    "Name":"Zorlu Solar Pakistan (Pvt.) Ltd (ZSPPL)",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2017,
+    "MW":100,
+    "Location":"Bahawalpur",
+    "Province":"Punjab"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 70.29258889,31.95891389 ]
+    },
+    "properties": {
+    "No":31,
+    "Name":"Kulachi Solar PV IPP",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2017,
+    "MW":50,
+    "Location":"Dera Ismail Khan",
+    "Province":"KPK"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 66.91957222,30.43515 ]
+    },
+    "properties": {
+    "No":32,
+    "Name":"Solar PV Power Project Kuchlak-II",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2018,
+    "MW":50,
+    "Location":"Quetta",
+    "Province":"Balochistan"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 66.91957222,30.43515 ]
+    },
+    "properties": {
+    "No":33,
+    "Name":"Solar PV Power Project Kuchlak-III",
+    "Energy Type":"Solar Power",
+    "Technology":"Photovoltaic Cell",
+    "Year":2018,
+    "MW":50,
+    "Location":"Quetta",
+    "Province":"Balochistan"
+    }
+  }
+]
+}
