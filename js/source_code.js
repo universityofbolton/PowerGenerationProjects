@@ -171,27 +171,27 @@ $(document).ready(function () {
     PAT = L.marker([34.342, 73.429],{
         icon: iconHydel,
         title: "Patrind Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/PAT.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/PAT.PNG" style = "width: 300px">')
     ARK = L.marker([36.026, 71.737],{
         icon: iconHydel,
         title: "Arkari Gol Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/ARK.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ARK.PNG" style = "width: 300px">')
     GUL = L.marker([33.455, 73.863],{
         icon: iconHydel,
         title: "Gulpur Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/GUL.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/GUL.PNG" style = "width: 300px">')
     DAS = L.marker([35.301, 73.203],{
         icon: iconHydel,
         title: "Dasu Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/DAS.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/DAS.PNG" style = "width: 300px">')
     AZD = L.marker([33.76775000, 73.57151389],{
         icon: iconHydel,
         title: "Azad Pattan Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/AZD.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/AZD.PNG" style = "width: 300px">')
     TAR = L.marker([34.088, 72.699],{
         icon: iconHydel,
         title: "Tarbela 5th Extension Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/TAR.png" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/TAR.PNG" style = "width: 300px">')
                                         //Wind Power
     JHM = L.marker([25.164, 68.007],{
         icon: iconWind,
