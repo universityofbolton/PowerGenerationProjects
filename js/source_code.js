@@ -134,102 +134,102 @@ $(document).ready(function () {
     Uch = L.marker([28.582, 68.172],{
         icon: iconThermal,
         title: "UCH-II Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/UCH.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/UCH.png" style = "width: 300px">')
     Hub = L.marker([24.919, 66.689],{
         icon: iconThermal,
         title: "660 MW Coal-Fired Power Plant"
-    }).addTo(myMap).bindPopup('<img src = "./img/HUB.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HUB.png" style = "width: 300px">')
     KAPCO = L.marker([30.147, 71.023],{
         icon: iconThermal,
         title: "KAPCO 660 MW Coal-Fired Power Plant"
-    }).addTo(myMap).bindPopup('<img src = "./img/KAPCO.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/KAPCO.png" style = "width: 300px">')
     BQPS = L.marker([24.789, 67.360],{
         icon: iconThermal,
         title: "BQPS-III 900 MW RLNG Based Combined Cycle Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/BQPS.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/BQPS.png" style = "width: 300px">')
     KPC = L.marker([24.856, 67.155],{
         icon: iconThermal,
         title: "Dual-Fuel Combined Cycle Power Plant KPC-II"
-    }).addTo(myMap).bindPopup('<img src = "./img/KPC.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/KPC.png" style = "width: 300px">')
     JAM = L.marker([25.474, 68.267],{
         icon: iconThermal,
         title: "Jamshoro Power Generation Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/JAM.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/JAM.png" style = "width: 300px">')
     HUBCO = L.marker([24.908, 66.695],{
         icon: iconThermal,
         title: "HUBCO Thar Coal Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/HUBCO.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HUBCO.png" style = "width: 300px">')
     ENG = L.marker([24.791, 67.378],{
         icon: iconThermal,
         title: "Engro Powergen Limited 450 MW RLNG CCPP"
-    }).addTo(myMap).bindPopup('<img src = "./img/ENG.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ENG.png" style = "width: 300px">')
     THAR = L.marker([24.816, 70.391],{
         icon: iconThermal,
         title: "Coal-Fired Power Plant in Energy Park, Block II Thar Coalfields"
-    }).addTo(myMap).bindPopup('<img src = "./img/THAR.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/THAR.png" style = "width: 300px">')
                                         //Hydropower
     PAT = L.marker([34.342, 73.429],{
         icon: iconHydel,
         title: "Patrind Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/PAT.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/PAT.png" style = "width: 300px">')
     ARK = L.marker([36.026, 71.737],{
         icon: iconHydel,
         title: "Arkari Gol Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/ARK.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ARK.png" style = "width: 300px">')
     GUL = L.marker([33.455, 73.863],{
         icon: iconHydel,
         title: "Gulpur Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/GUL.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/GUL.png" style = "width: 300px">')
     DAS = L.marker([35.301, 73.203],{
         icon: iconHydel,
         title: "Dasu Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/DAS.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/DAS.png" style = "width: 300px">')
     AZD = L.marker([33.76775000, 73.57151389],{
         icon: iconHydel,
         title: "Azad Pattan Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/AZD.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/AZD.png" style = "width: 300px">')
     TAR = L.marker([34.088, 72.699],{
         icon: iconHydel,
         title: "Tarbela 5th Extension Hydropower Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/TAR.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/TAR.png" style = "width: 300px">')
                                         //Wind Power
     JHM = L.marker([25.164, 68.007],{
         icon: iconWind,
         title: "Wind Power Project Jhimpir Power (Pvt.) Limited"
-    }).addTo(myMap).bindPopup('<img src = "./img/JHM.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/JHM.png" style = "width: 300px">')
     WDF = L.marker([24.919, 67.805],{
         icon: iconWind,
         title: "Windfarm At Jhimpir"
-    }).addTo(myMap).bindPopup('<img src = "./img/WDF.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/WDF.png" style = "width: 300px">')
     HAWA = L.marker([25.255, 67.979],{
         icon: iconWind,
         title: "Hawa Energy (Pvt.) Ltd"
-    }).addTo(myMap).bindPopup('<img src = "./img/HAWA.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HAWA.png" style = "width: 300px">')
     ZOR = L.marker([25.042, 67.996],{
         icon: iconWind,
         title: "Zorlu Enerji"
-    }).addTo(myMap).bindPopup('<img src = "./img/ZOR.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ZOR.png" style = "width: 300px">')
     TBT = L.marker([25.013, 67.852],{
         icon: iconWind,
         title: "Triconboston Wind Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/TBT.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/TBT.png" style = "width: 300px">')
                                         //Solar Power
     HHM = L.marker([27.419, 69.007],{
         icon: iconSolar,
         title: "Scatec Solar Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/HHM.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/HHM.png" style = "width: 300px">')
     ZNFA = L.marker([30.903, 71.560],{
         icon: iconSolar,
         title: "Atlas Solar Power Project"
-    }).addTo(myMap).bindPopup('<img src = "./img/ZNFA.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ZNFA.png" style = "width: 300px">')
     ZLU = L.marker([29.281, 71.789],{
         icon: iconSolar,
         title: "Zorlu Solar Pakistan (Pvt.) Ltd"
-    }).addTo(myMap).bindPopup('<img src = "./img/ZLU.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/ZLU.png" style = "width: 300px">')
     KCH1 = L.marker([30.435, 66.920],{
         icon: iconSolar,
         title: "Solar PV Power Project Kuchlak-II & III"
-    }).addTo(myMap).bindPopup('<img src = "./img/KCH1.JPG" style = "width: 300px">')
+    }).addTo(myMap).bindPopup('<img src = "./img/KCH1.png" style = "width: 300px">')
     // KCH2 = L.marker([30.435, 66.920],{icon: iconSolar
     // }).addTo(myMap).bindPopup('<img src = "./img/KCH2.JPG" style = "width: 300px">')
     //Overlay
